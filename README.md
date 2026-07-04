@@ -1,64 +1,52 @@
 # multi-tier-agent-system
 
-A three-tier agent system for work that needs clean delegation, strict review gates, and immediate escalation.
+One repo. Many agent surfaces. Clean hierarchy.
 
-## What this repo gives you
+## What it gives you
 
-- A main-manager / sub-manager / worker hierarchy.
+- Main manager, sub-manager, worker.
 - JSON-only internal handoffs.
-- Emergency bypass from worker to main manager.
-- Skill packaging that can be installed across multiple agent surfaces.
-- OpenClaw bootstrap support.
+- Worker emergency bypass.
+- OpenClaw bootstrap.
 - Antigravity support.
-- One-shot multi-agent install with `--all`.
+- One-shot install across many surfaces.
 
-## Quick install
-
-Install for every supported surface at once:
+## Install fast
 
 ```bash
 node scripts/install.js --all
 ```
 
-Install for just one surface:
+Install only some surfaces:
 
 ```bash
-node scripts/install.js --only codex
-node scripts/install.js --only openclaw
-node scripts/install.js --only antigravity
+node scripts/install.js --only codex --only openclaw --only antigravity
 ```
 
-Preview without writing:
+Preview first:
 
 ```bash
 node scripts/install.js --all --dry-run
 ```
 
-## Canonical skill package
+## Install guide
 
-The distributable skill lives in:
+Read [INSTALL.md](./INSTALL.md) for the full matrix and platform notes.
+
+## Skill package
+
+The canonical skill lives in:
 
 - `skills/multi-tier-agent-system/SKILL.md`
 - `skills/multi-tier-agent-system/README.md`
 - `skills/multi-tier-agent-system/references/`
 - `agents/`
-- `INSTALL.md`
+- `scripts/install.js`
 
-## Install by platform
+## Core loop
 
-Use the full per-platform guide in [INSTALL.md](./INSTALL.md).
-
-## Core idea
-
-The main manager stays at the top level and talks to the user. Sub-managers break large work into bounded micro-tasks and review worker results. Workers do only the assigned task. If a worker hits a critical blocker, it can send `status: EMERGENCY` directly to the main manager and stop the branch.
+Main manager talks to user. Sub-manager splits the work. Worker does the task. If work breaks hard, worker sends `status: EMERGENCY` and the branch stops.
 
 ## OpenClaw
 
-OpenClaw support uses a short bootstrap block plus the role prompts in `agents/`. The workspace marker block lives in `skills/multi-tier-agent-system/references/openclaw-bootstrap.md`.
-
-## Files
-
-- `INSTALL.md` for install commands and platform notes
-- `skills/multi-tier-agent-system/` for the actual skill package
-- `agents/` for role prompts
-- `references/` for protocol details
+OpenClaw gets the workspace bootstrap from `skills/multi-tier-agent-system/references/openclaw-bootstrap.md` plus the role prompts in `agents/`.
