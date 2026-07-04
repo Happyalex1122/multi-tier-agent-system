@@ -1,0 +1,13 @@
+{
+  "name": "multi-tier-agent-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-tier agent system skill with multi-agent install support.",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "install:all": "node scripts/install.js --all",
+    "install:codex": "node scripts/install.js --only codex",
+    "install:openclaw": "node scripts/install.js --only openclaw"
+  }
+}
