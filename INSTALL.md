@@ -31,6 +31,27 @@ Preview without writing:
 node scripts/install.js --all --dry-run
 ```
 
+## Bootstrap installers
+
+### Windows PowerShell
+
+```powershell
+irm https://raw.githubusercontent.com/Happyalex1122/multi-tier-agent-system/main/install.ps1 | iex
+```
+
+### Shell
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Happyalex1122/multi-tier-agent-system/main/install.sh | bash
+```
+
+### npm / npx
+
+```bash
+npx -y github:Happyalex1122/multi-tier-agent-system -- --all
+npm exec -y github:Happyalex1122/multi-tier-agent-system -- --all
+```
+
 ## Install by agent
 
 ### Codex
