@@ -10,11 +10,32 @@ One repo. Many agent surfaces. Clean hierarchy.
 - OpenClaw bootstrap.
 - Antigravity support.
 - One-shot install across many surfaces.
+- PowerShell bootstrap installer for Windows.
+- npm / npx execution path.
 
 ## Install fast
 
 ```bash
 node scripts/install.js --all
+```
+
+Windows PowerShell:
+
+```powershell
+irm https://raw.githubusercontent.com/Happyalex1122/multi-tier-agent-system/main/install.ps1 | iex
+```
+
+Shell:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Happyalex1122/multi-tier-agent-system/main/install.sh | bash
+```
+
+npm / npx:
+
+```bash
+npx -y github:Happyalex1122/multi-tier-agent-system -- --all
+npm exec -y github:Happyalex1122/multi-tier-agent-system -- --all
 ```
 
 Install only some surfaces:
@@ -42,6 +63,8 @@ The canonical skill lives in:
 - `skills/multi-tier-agent-system/references/`
 - `agents/`
 - `scripts/install.js`
+- `install.ps1`
+- `install.sh`
 
 ## Core loop
 
