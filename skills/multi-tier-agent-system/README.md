@@ -9,7 +9,8 @@ This skill defines a three-tier orchestration pattern for large or risky tasks. 
 - Restricts workers to execution only.
 - Enforces JSON-only internal handoffs.
 - Includes a direct emergency route for critical failures.
-- Works across Codex, Claude Code, OpenClaw, and other agent surfaces that can load Markdown instructions.
+- Works across Codex, Claude Code, OpenClaw, Antigravity, and other agent surfaces that can load Markdown instructions.
+- Can be installed across many surfaces in one pass with `node scripts/install.js --all`.
 
 ## Trigger ideas
 
@@ -39,4 +40,5 @@ OpenClaw works best when the workspace has a small bootstrap block plus the role
 - `references/communication-schema.md` defines the JSON message shape.
 - `references/escalation-protocol.md` defines the halt path.
 - `references/openclaw-bootstrap.md` contains the OpenClaw marker block.
-- `agents/` contains the role prompts for manager, sub-manager, and worker surfaces.
+- `agents/` contains the role prompts for manager, sub-manager, worker, and antigravity surfaces.
+- `scripts/install.js` provides the simultaneous multi-agent installer.
