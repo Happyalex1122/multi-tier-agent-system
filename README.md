@@ -9,6 +9,30 @@ A three-tier agent system for work that needs clean delegation, strict review ga
 - Emergency bypass from worker to main manager.
 - Skill packaging that can be installed across multiple agent surfaces.
 - OpenClaw bootstrap support.
+- Antigravity support.
+- One-shot multi-agent install with `--all`.
+
+## Quick install
+
+Install for every supported surface at once:
+
+```bash
+node scripts/install.js --all
+```
+
+Install for just one surface:
+
+```bash
+node scripts/install.js --only codex
+node scripts/install.js --only openclaw
+node scripts/install.js --only antigravity
+```
+
+Preview without writing:
+
+```bash
+node scripts/install.js --all --dry-run
+```
 
 ## Canonical skill package
 
@@ -20,9 +44,9 @@ The distributable skill lives in:
 - `agents/`
 - `INSTALL.md`
 
-## Install
+## Install by platform
 
-Use the per-platform guide in [INSTALL.md](./INSTALL.md).
+Use the full per-platform guide in [INSTALL.md](./INSTALL.md).
 
 ## Core idea
 
