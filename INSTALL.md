@@ -10,6 +10,27 @@ The distributable skill lives at:
 - `skills/multi-tier-agent-system/README.md`
 - `skills/multi-tier-agent-system/references/`
 
+## Multi-agent install
+
+Install for every supported surface at once:
+
+```bash
+node scripts/install.js --all
+```
+
+Install only selected surfaces:
+
+```bash
+node scripts/install.js --only codex --only openclaw
+node scripts/install.js --only antigravity
+```
+
+Preview without writing:
+
+```bash
+node scripts/install.js --all --dry-run
+```
+
 ## Install by agent
 
 ### Codex
@@ -40,6 +61,12 @@ npx skills add Happyalex1122/multi-tier-agent-system -a windsurf
 
 ```bash
 npx skills add Happyalex1122/multi-tier-agent-system -a cline
+```
+
+### Antigravity
+
+```bash
+npx skills add Happyalex1122/multi-tier-agent-system -a antigravity
 ```
 
 ### OpenClaw
