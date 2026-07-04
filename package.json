@@ -5,9 +5,16 @@
   "description": "Multi-tier agent system skill with multi-agent install support.",
   "license": "MIT",
   "type": "commonjs",
+  "bin": {
+    "multi-tier-agent-system": "./scripts/install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "install:all": "node scripts/install.js --all",
     "install:codex": "node scripts/install.js --only codex",
-    "install:openclaw": "node scripts/install.js --only openclaw"
+    "install:openclaw": "node scripts/install.js --only openclaw",
+    "install:antigravity": "node scripts/install.js --only antigravity"
   }
 }
