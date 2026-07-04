@@ -4,7 +4,7 @@ description: This skill should be used when coordinating complex work through a 
 category: orchestration
 risk: medium
 source: custom
-tags: [multi-agent, orchestration, delegation, escalation, json, hierarchy, openclaw, codex]
+tags: [multi-agent, orchestration, delegation, escalation, json, hierarchy, openclaw, codex, antigravity]
 date_added: "2026-07-03"
 ---
 
@@ -26,9 +26,30 @@ This skill is designed to work across multiple agent surfaces:
 - Windsurf
 - Cline
 - OpenClaw
+- Antigravity
 - Any other agent that can load Markdown skills or workspace prompts
 
 If a platform does not support native subagents, use the role templates in `agents/` to simulate the hierarchy.
+
+## Multi-agent install
+
+The repo includes a single installer that can target multiple surfaces in one run:
+
+```bash
+node scripts/install.js --all
+```
+
+Install only selected surfaces:
+
+```bash
+node scripts/install.js --only codex --only openclaw --only antigravity
+```
+
+Preview first:
+
+```bash
+node scripts/install.js --all --dry-run
+```
 
 ## When to Use This Skill
 
